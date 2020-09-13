@@ -7,7 +7,11 @@ able to write it out. This question in particular has really furthered my
 understanding of dynamic programming and how to approach problems.
 
 Dynamic programming is a technique by which recomputation is minimized by storing the
-results of subproblems. This is a tradeoff of time for space.
+results of subproblems. This is a tradeoff of time for space. It is based on the idea
+that the optimal solution to a problem depends on the optimal solution to its subproblems.
+
+In this question the subproblems we solve are the largest square possible for each 1 in the
+array
 
 In this question we iterate through the array with the assumption that each itterant is
 the bottom right corner of a square. We then calculate the value of that square by checking
