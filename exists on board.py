@@ -5,7 +5,8 @@ are being reflected to board.
 Have tried board.copy() and board[:] to no avail
 
 Will come back later
-
+Maybe try marking visited and unmarking if it fails?
+https://leetcode.com/problems/word-search/submissions/
 
 """
 
@@ -18,10 +19,10 @@ def exist(board, word):
     def dfs(index, s, temp_board):
         if s == "":
             return True
-
+        # temp = temp_board[index[0],index[1]]
         for y, x in (index[0] - 1, index[1]), (index[0] + 1, index[1]), (index[0], index[1] - 1), (index[0], index[1] + 1):
             if 0 <= y <= max_y and 0 <= x <= max_x and s[0] == temp_board[y][x]:
-                temp_board[y][x] = "#" # Mark visited indices for this run
+                # temp_board[y][x] = "#" # Mark visited indices for this run
                 if dfs((y,x), s[1:], temp_board):
                     return True
         return False
@@ -32,7 +33,7 @@ def exist(board, word):
             if board[y][x] == word[0]:
                 temp_board = board[:]
 
-                temp_board[y][x] = "#"
+                # temp_board[y][x] = "#"
                 s = word[1:]
                 if dfs((y,x), s, temp_board):
 
@@ -55,6 +56,6 @@ board3 = [["C","A","A"],
           ["B","C","D"]]
 
 
-# print(exist(board, "SEED"))
-# print(exist(board2, "aaa"))
+print(exist(board, "SEED"))
+print(exist(board2, "aaa"))
 print(exist(board3, "AAB"))
