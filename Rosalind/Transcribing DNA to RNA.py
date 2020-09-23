@@ -16,4 +16,5 @@ for n in range(len(t)):
         # Strings are immutable, to change the Ts to Us we can construct a "new" string
         # by splicing the old one.
         t = t[:n] + "U" + t[n+1:]
+# Submissions can be copy pasted.
 print(t)
