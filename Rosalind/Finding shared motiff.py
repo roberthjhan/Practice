@@ -79,6 +79,6 @@ def longestMotiff(common):
 
 filename = "rosalind_lcsm.txt"
 data = open(filename, "r")
-data = (organizeData(data))
+data = organizeData(data)
 commonSeqs = countMotiff(data)
 print(longestMotiff(commonSeqs))
