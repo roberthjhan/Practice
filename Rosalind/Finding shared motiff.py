@@ -18,6 +18,15 @@ kbp each in FASTA format.
 Return: A longest common substring of the collection. (If multiple
 solutions exist, you may return any single solution.)
 
+Comments:
+
+This solution iterates through every possible substring in each sequence.
+A better solution might only check the substrings in the first sequence
+then check the other sequences to see if it is common to all.
+
+This solution also starts with the smallest substrings. A better solution
+implementing the better algorithm would start with the largest substrings
+then return the first one found.
 """
 
 def organizeData(data):
